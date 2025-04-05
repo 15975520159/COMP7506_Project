@@ -1,0 +1,34 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <ImageView
+        android:id="@+id/cellBattery_icon"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/battery" />
+
+    <TextView
+        android:id="@+id/temp_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cell XXX"
+        android:textColor="#CC673AB7"
+        app:layout_constraintStart_toEndOf="@+id/cellBattery_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XXXX mV"
+        app:layout_constraintStart_toEndOf="@+id/cellBattery_icon"
+        app:layout_constraintTop_toBottomOf="@+id/temp_id" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
