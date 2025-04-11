@@ -219,11 +219,11 @@ public class MainActivity extends AppCompatActivity implements CardListAdapter.O
                             String exception = battery.getString("exception");
 
                             if(I > 0){
-                                state = "放电中";
+                                state = "Discharging";
                             } else if(I == 0){
-                                state = "静置中";
+                                state = "Idle";
                             } else{
-                                state = "充电中";
+                                state = "Charging";
                             }
 
                             String warning = getWarningMeaning(battery); // 获取警告信息

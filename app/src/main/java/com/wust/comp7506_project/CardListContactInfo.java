@@ -12,9 +12,9 @@ public class CardListContactInfo {
     protected Double electricity = null;
     protected Double voltage = null;
 
-    protected static final String LOCATION_PREFIX = "电池位置: ";
-    protected static final String ID_PREFIX = "电池ID: ";
-    protected static final String SYNC_PREFIX = "更新时间: ";
+    protected static final String LOCATION_PREFIX = "Battery Location: ";
+    protected static final String ID_PREFIX = "Battery ID: ";
+    protected static final String SYNC_PREFIX = "Sync: ";
     protected static final String SOC_PREFIX = "%";
     protected static final String STATE_PREFIX = "";
 

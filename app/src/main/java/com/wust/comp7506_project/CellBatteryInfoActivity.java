@@ -72,7 +72,7 @@ public class CellBatteryInfoActivity extends AppCompatActivity {
         exception = extras.getString("exception");
         if (exception.equals("no battery table")) {
             loading.setVisibility(View.INVISIBLE);
-            Toast.makeText(this, "此电池暂无数据信息", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "There is no data available for the current battery", Toast.LENGTH_LONG).show();
         }
 
         FrameLayout backButtonLayout = findViewById(R.id.backButtonLayout);

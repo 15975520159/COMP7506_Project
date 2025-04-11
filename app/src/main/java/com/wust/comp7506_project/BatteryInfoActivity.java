@@ -1,5 +1,6 @@
 package com.wust.comp7506_project;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
@@ -15,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import org.json.JSONObject;
@@ -94,23 +96,23 @@ public class BatteryInfoActivity extends AppCompatActivity {
         exception = extras.getString("exception");
         if (exception.equals("no battery table")) {
             loading.setVisibility(View.INVISIBLE);
-            Toast.makeText(this, "此电池暂无数据信息", Toast.LENGTH_LONG).show();
-            // 创建并显示弹窗
-//            new AlertDialog.Builder(this)
-//                    .setTitle("提示")
-//                    .setMessage("当前电池暂无数据") // 显示异常信息
-//                    .setPositiveButton("确认", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialog, int which) {
-//                            dialog.dismiss(); // 关闭弹窗
-//                            Intent intent = new Intent(BatteryInfoActivity.this, MainActivity.class);
-//                            intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-//                            startActivity(intent);
-//                            overridePendingTransition(R.xml.slide_in_left, R.xml.slide_out_right);
-//                        }
-//                    })
-//                    .setCancelable(false) // 防止用户点击外部取消
-//                    .show();
+//            Toast.makeText(this, "此电池暂无数据信息", Toast.LENGTH_LONG).show();
+
+            new AlertDialog.Builder(this)
+                    .setTitle("Info")
+                    .setMessage("There is no data available for the current battery") // 显示异常信息
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss(); // 关闭弹窗
+                            Intent intent = new Intent(BatteryInfoActivity.this, MainActivity.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                            startActivity(intent);
+                            overridePendingTransition(R.xml.slide_in_left, R.xml.slide_out_right);
+                        }
+                    })
+                    .setCancelable(false) // 防止用户点击外部取消
+                    .show();
         }
 
         FrameLayout backButtonLayout = findViewById(R.id.backButtonLayout);
@@ -295,16 +297,16 @@ public class BatteryInfoActivity extends AppCompatActivity {
                     ImageView Charge_Over_Temp_Image = findViewById(R.id.Charge_Over_Temp);
 
                     if(I > 0){
-                        Battery_State.setText("放电中");
+                        Battery_State.setText("Discharging");
                     } else if(I < 0){
-                        Battery_State.setText("充电中");
+                        Battery_State.setText("Charging");
                     } else{
-                        Battery_State.setText("静置中");
+                        Battery_State.setText("Idle");
                     }
                     if(Online_State == 1){
-                        Online_State_Text.setText("在线");
+                        Online_State_Text.setText("Online");
                     } else{
-                        Online_State_Text.setText("离线");
+                        Online_State_Text.setText("Offline");
                     }
                     Latest_Update_Text.setText(Create_At);
                     V_Text.setText(String.valueOf(V));

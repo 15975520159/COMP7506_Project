@@ -105,7 +105,7 @@ public class MapActivity extends AppCompatActivity {
         exception = extras.getString("exception");
         if (exception.equals("no battery table")) {
             loadingGif.setVisibility(View.INVISIBLE);
-            Toast.makeText(this, "此电池暂无数据信息", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "There is no data available for the current battery", Toast.LENGTH_LONG).show();
         }
 
         // 获取传递的 batteryId
@@ -396,9 +396,9 @@ public class MapActivity extends AppCompatActivity {
                             past7DaysMileageTextView = findViewById(R.id.past_7_days_mileage);
                             totalMileageTextView = findViewById(R.id.total_mileage);
 
-                            nearestMileageTextView.setText("最后1日里程：" + String.format("%.2f", lastMileage) + " km");
+                            nearestMileageTextView.setText("Last day's mileage: " + String.format("%.2f", lastMileage) + " km");
                             past7DaysMileageTextView.setText(past7DaysMileage.toString());
-                            totalMileageTextView.setText("总里程：" + String.format("%.2f", totalMileage) + " km");
+                            totalMileageTextView.setText("Total mileage: " + String.format("%.2f", totalMileage) + " km");
 
                             nearestMileageTextView.setVisibility(View.GONE);
                             past7DaysMileageTextView.setVisibility(View.GONE);
@@ -456,7 +456,7 @@ public class MapActivity extends AppCompatActivity {
                             Log.d("Gaode", "Formatted Address: " + formattedAddress);
 
                             TextView address = findViewById(R.id.address);
-                            address.setText("最后位置: " + formattedAddress);
+                            address.setText("Location: " + formattedAddress);
 //                            // 在地图上显示地址信息
 //                            View addressInfoWindowView = createCustomView("最后位置: " + formattedAddress);
 //                            InfoWindow addressInfoWindow = new InfoWindow(addressInfoWindowView, new LatLng(latitude, longitude), -50);

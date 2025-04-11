@@ -374,7 +374,7 @@
                     android:id="@+id/wholeBatteryButton"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/shield_purple" />
+                    android:src="@drawable/shield" />
             </FrameLayout>
 
             <FrameLayout
@@ -393,7 +393,7 @@
                     android:id="@+id/cellBatteryButton"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/battery_gray" />
+                    android:src="@drawable/battery" />
             </FrameLayout>
 
             <TextView
@@ -402,7 +402,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="35dp"
                 android:text="Overall State"
-                android:textColor="#CC673AB7"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -416,7 +415,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="35dp"
                 android:text="Single State"
-                android:textColor="#717171"
+                android:textColor="#CC673AB7"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"

@@ -339,6 +339,7 @@
                     android:id="@+id/Battery_Type"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
                     android:layout_marginTop="15dp"
                     app:layout_constraintStart_toEndOf="@+id/batteryTypeText"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -347,6 +348,7 @@
                     android:id="@+id/Cell_Number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
                     android:layout_marginBottom="15dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/batteryStringTest" />
@@ -355,6 +357,7 @@
                     android:id="@+id/capacity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
                     android:layout_marginTop="15dp"
                     app:layout_constraintStart_toEndOf="@+id/batteryCapacityText"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -363,6 +366,7 @@
                     android:id="@+id/Cycle_Number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
                     android:layout_marginBottom="15dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/batteryCycleTest" />
